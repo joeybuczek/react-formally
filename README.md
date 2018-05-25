@@ -1,7 +1,11 @@
-## react-formally
+## Formally
 
-A library of form components with simplified configuration.
+A React component library for quickly creating accessibility-enabled forms.
+
+### Installation
+
+`npm install react-formally`
 
 ### Docs
 
-Coming to a github page near you...
+[Formally Documentation](http://joeybuczek.github.io/react-formally/)
