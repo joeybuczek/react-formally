@@ -6,16 +6,20 @@
   box-sizing: border-box;
 }
 
-div[class*="formally"] form {
+.formally-container {
+  margin-bottom: 5px;
+}
+
+form[class*="formally"] {
   padding: 5px;
 }
 
-div[class*="formally"] .field-container {
+form[class*="formally"] .field-container {
   padding: 0px;
   margin-bottom: 5px;
 }
 
-div[class*="formally"] .field-label {
+form[class*="formally"] .field-label {
   font-size: 0.85em;
   font-family: Arial, Helvetica, sans-serif;
   color: #5b616b;
@@ -26,8 +30,8 @@ div[class*="formally"] .field-label {
   color: #cd2026;
 }
 
-div[class*="formally"] .radio-label,
-div[class*="formally"] .checkbox-label {
+form[class*="formally"] .radio-label,
+form[class*="formally"] .checkbox-label {
   font-weight: normal;
 }
 
@@ -213,6 +217,32 @@ select::-ms-expand {
  * Validation Errors
  */
 
-div[class*="formally"] .validation-error {
+input[aria-invalid="true"],
+input[aria-invalid="true"]:focus,
+select[aria-invalid="true"],
+select[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"],
+textarea[aria-invalid="true"]:focus {
   border-color: #e31c3d;
+}
+input[type="checkbox"][aria-invalid="true"] ~ label {
+  color: #cd2026;
+}
+
+.validation-error-message {
+  font-size: 0.8em;
+  color: #cd2026;
+  margin-right: 10px;
+}
+textarea ~ .validation-error-message {
+  position: relative;
+  top: -5px;
+}
+input ~ .validation-error-message,
+textarea ~ .validation-error-message,
+select ~ .validation-error-message {
+  display: block;
+}
+input[type="checkbox"] ~ .validation-error-message {
+  display: inline-block;
 }
