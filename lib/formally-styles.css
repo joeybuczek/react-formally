@@ -3,6 +3,8 @@
   */
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,8 +22,9 @@ form[class*="formally"] .field-container {
 }
 
 form[class*="formally"] .field-label {
-  font-size: 0.85em;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
   color: #5b616b;
   margin-bottom: 1px;
 }
@@ -33,6 +36,8 @@ form[class*="formally"] .field-label {
 form[class*="formally"] .radio-label,
 form[class*="formally"] .checkbox-label {
   font-weight: normal;
+  position: relative;
+  top: -8px;
 }
 
 .formally input,
@@ -45,6 +50,10 @@ form[class*="formally"] .checkbox-label {
   outline: none;
   padding: 4px;
   width: 100%;
+}
+.formally input,
+.formally select {
+  height: 30px;
 }
 .formally select {
   height: 30px;
@@ -230,7 +239,8 @@ input[type="checkbox"][aria-invalid="true"] ~ label {
 }
 
 .validation-error-message {
-  font-size: 0.8em;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
   color: #cd2026;
   margin-right: 10px;
 }

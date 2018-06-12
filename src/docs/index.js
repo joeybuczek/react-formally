@@ -5,6 +5,7 @@ import { FormDocs } from "./FormDocs";
 import { FieldsDocs } from "./FieldsDocs";
 import { ActionsDocs } from "./ActionsDocs";
 import { StylingDocs } from "./StylingDocs";
+import "../components/formally-styles.css";
 
 const Tab = ({ children, ...props }) => {
   return (

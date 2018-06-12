@@ -1,4 +1,6 @@
-import "./formally-styles.css";
+// Commented out for now as it causes style loader issues in webpack.
+// Once resolved, this may or may not exist in this file.
+// import "./formally-styles.css";
 export { FormData } from "./Context";
 export { default as Form } from "./Form";
 export { default as Field } from "./Field";

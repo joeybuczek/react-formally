@@ -17,6 +17,12 @@ const figureLibrary = `<Form>
   </div>
   <Submit className="btn btn-primary" />
 </Form>`;
+const figureImportThemes = `import { Form, Input, Submit } from "react-formally";
+import "react-formally/lib/formally-styles.css;
+
+// Ensure you're using the right style loaders if using webpack.
+// Otherwise, copy the .css from the node_modules folder and 
+// reference it in your index.html file."`;
 
 export const StylingDocs = () => {
   return (
@@ -33,7 +39,13 @@ export const StylingDocs = () => {
         <li>"Formally-Minimal": A modern, also neutral, minimalistic theme</li>
       </ul>
       <p>
-        To use these themes, simply assign the <code>className</code> prop of
+        The current way to pull these themes into your solution is to import the
+        stylesheet into your application where you will be using the components.
+        See below example:
+      </p>
+      <pre>{figureImportThemes}</pre>
+      <p>
+        To apply these themes, simply assign the <code>className</code> prop of
         the <code>{"<Form>"}</code> component to one of two values:
       </p>
       <pre>{figureTheme}</pre>
