@@ -9,7 +9,19 @@ class Form extends Component {
     this.state = {
       formData: { ...(props.defaultValues || {}) },
       formSubmitted: false,
-      validatedFormData: {}
+      fieldIsValid: this.fieldIsValid,
+      validatedFormData: {},
+      validationRules: props.validationRules,
+      actions: {
+        handleElementChange: this.handleElementChange,
+        handleFormSubmit: this.handleFormSubmit,
+        handleFormReset: this.handleFormReset
+      },
+      formApi: {
+        handleCustomChange: this.handleCustomChange,
+        fieldIsValid: this.fieldIsValid
+      },
+      defaultValues: props.defaultValues
     };
   }
 
@@ -103,25 +115,7 @@ class Form extends Component {
     } = this.props;
     return (
       <div className="formally-container">
-        <Provider
-          value={{
-            formData: this.state.formData,
-            formSubmitted: this.state.formSubmitted,
-            fieldIsValid: this.fieldIsValid,
-            validatedFormData: this.state.validatedFormData,
-            validationRules,
-            actions: {
-              handleElementChange: this.handleElementChange,
-              handleFormSubmit: this.handleFormSubmit,
-              handleFormReset: this.handleFormReset
-            },
-            formApi: {
-              handleCustomChange: this.handleCustomChange,
-              fieldIsValid: this.fieldIsValid
-            },
-            ...{ defaultValues }
-          }}
-        >
+        <Provider value={this.state}>
           <form onSubmit={this.handleFormSubmit} {...rest}>
             {children}
           </form>

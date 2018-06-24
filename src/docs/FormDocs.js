@@ -177,7 +177,7 @@ export const FormDocs = () => {
         style={{ width: 200, marginLeft: 5 }}
         defaultValues={{
           greeting: "Hello!",
-          question: "How are you today?"
+          pleasantQuestion: "How are you today?"
         }}
       >
         <Input name="greeting" label="Accepted Greeting:" />
