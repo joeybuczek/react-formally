@@ -65,3 +65,6 @@ lib/*
 
 .DS_Store
 src/.DS_Store
+
+# Todo list
+TODO.md
