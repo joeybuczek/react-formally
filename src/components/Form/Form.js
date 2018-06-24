@@ -76,31 +76,33 @@ class Form extends Component {
     }
   };
 
-  handleFormReset = () => {
-    let contextForm = this;
-    let prevState = { ...this.state };
-    let newState = {
-      formData: { ...(contextForm.props.defaultValues || {}) },
-      formSubmitted: false
-    };
-    contextForm.setState(newState, () => {
-      contextForm.props.onReset &&
-        contextForm.props.onReset(prevState.formData, newState.formData);
+  handleFormReset = e => {
+    this.setState(currentState => {
+      return {
+        formData: { ...(this.props.defaultValues || {}) },
+        formSubmitted: false
+      };
     });
   };
 
-  handleElementChange = e => {
-    let newState = { ...this.state };
-    newState.formData[e.target.name] = e.target.value;
-    this.setState(newState);
-    this.revalidateForm(newState.formData);
+  handleElementChange = ({ target }) => {
+    this.setState(
+      ({ formData }) => {
+        formData[target.name] = target.value;
+        return { formData };
+      },
+      () => this.revalidateForm(this.state.formData)
+    );
   };
 
   handleCustomChange = ({ name, value }) => {
-    let newState = { ...this.state };
-    newState.formData[name] = value;
-    this.setState(newState);
-    this.revalidateForm(newState.formData);
+    this.setState(
+      ({ formData }) => {
+        formData[name] = value;
+        return { formData };
+      },
+      () => this.revalidateForm(this.state.formData)
+    );
   };
 
   render() {
@@ -157,7 +159,7 @@ Form.propTypes = {
   onSubmit: func,
 
   /** Optional: Invoked upon form reset. (formData) => void */
-  onReset: func,
+  // onReset: func,
 
   /** Optional: Configures the submit event to immediately invoke event.preventDefault */
   prevent: bool,

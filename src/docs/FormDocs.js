@@ -210,13 +210,13 @@ export const FormDocs = () => {
             desc:
               "A function that, if provided, gets passed the submit event and the form data when the form is submitted. (event, formData) => void"
           },
-          {
-            name: "onReset",
-            type: "func",
-            req: "No",
-            desc:
-              "A function that, if provided, would get invoked immediately after the form reset event occurs. It gets passed both the state of the form data before and after the reset. (prevFormData, defaultFormData) => void"
-          },
+          // {
+          //   name: "onReset",
+          //   type: "func",
+          //   req: "No",
+          //   desc:
+          //     "A function that, if provided, would get invoked immediately after the form reset event occurs. It gets passed both the state of the form data before and after the reset. (prevFormData, defaultFormData) => void"
+          // },
           {
             name: "prevent",
             type: "bool",
