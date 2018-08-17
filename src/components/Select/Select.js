@@ -102,7 +102,7 @@ Select.propTypes = {
   inline: bool,
 
   /** Optional: Sets label text */
-  label: string,
+  label: any,
 
   /** Optional: Positions label text below field */
   labelBelow: bool,

@@ -1,7 +1,7 @@
 import React from "react";
 import FieldContainer from "../FieldContainer";
 import Label from "../Label";
-import { string, bool, object } from "prop-types";
+import { string, bool, object, any } from "prop-types";
 
 const Field = ({
   children,
@@ -59,7 +59,7 @@ Field.propTypes = {
   inline: bool,
 
   /** Optional: Label text */
-  label: string,
+  label: any,
 
   /** Optional: Positions label text below field */
   labelBelow: bool,

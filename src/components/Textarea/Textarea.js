@@ -2,7 +2,7 @@ import React from "react";
 import { FormData } from "../Context";
 import FieldContainer from "../FieldContainer";
 import Label from "../Label";
-import { string, number, bool, object, func } from "prop-types";
+import { string, number, bool, object, func, any } from "prop-types";
 
 const Textarea = ({
   ariaLabel,
@@ -101,7 +101,7 @@ Textarea.propTypes = {
   inline: bool,
 
   /** Optional: Sets label text */
-  label: string,
+  label: any,
 
   /** Optional: Positions label text below field */
   labelBelow: bool,

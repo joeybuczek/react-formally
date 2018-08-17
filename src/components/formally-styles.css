@@ -244,10 +244,10 @@ input[type="checkbox"][aria-invalid="true"] ~ label {
   color: #cd2026;
   margin-right: 10px;
 }
-textarea ~ .validation-error-message {
+/* textarea ~ .validation-error-message {
   position: relative;
   top: -5px;
-}
+} */
 input ~ .validation-error-message,
 textarea ~ .validation-error-message,
 select ~ .validation-error-message {

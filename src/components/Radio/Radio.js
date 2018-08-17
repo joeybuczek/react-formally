@@ -89,7 +89,7 @@ Radio.propTypes = {
   inline: bool,
 
   /** Required: Sets the text to be displayed */
-  label: string.isRequired,
+  label: any.isRequired,
 
   /** Required: Sets the name attribute */
   name: string.isRequired,

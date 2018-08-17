@@ -68,10 +68,9 @@ export const ActionsDocs = () => {
       <H size={24}>Reset Component</H>
       <p>
         If you want to allow users to reset your form, the{" "}
-        <code>{"<Reset>"}</code> component is available, which is a wrapper
-        around a <code>{'<input type="reset">'}</code> element with some
-        additional styling and logic built in. If you have form validation
-        applied to your Formally form, this component will reset that as well.
+        <code>{"<Reset>"}</code> component is available to reset your form fields. 
+        If you have form validation applied to your Formally form, this component 
+        will reset that as well.
       </p>
       <pre>{figureReset}</pre>
       <Form prevent className="formally" style={{ width: 200, marginLeft: 5 }}>

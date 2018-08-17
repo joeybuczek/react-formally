@@ -2,7 +2,7 @@ import React from "react";
 import { FormData } from "../Context";
 import FieldContainer from "../FieldContainer";
 import Label from "../Label";
-import { string, bool, object, func } from "prop-types";
+import { string, bool, object, func, any} from "prop-types";
 
 const Input = ({
   ariaLabel,
@@ -99,7 +99,7 @@ Input.propTypes = {
   inline: bool,
 
   /** Optional: Sets label text */
-  label: string,
+  label: any,
 
   /** Optional: Positions label text below field */
   labelBelow: bool,
